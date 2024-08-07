@@ -61,7 +61,7 @@ app.use((req, res, next) => {
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
-// Start the server
+// Start the server//
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
