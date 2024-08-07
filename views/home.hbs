@@ -1,0 +1,32 @@
+{{> heading }}
+<div class="content">
+    <div class="book-container">
+        <h2>Available Books</h2>
+        <form method="POST" action="/borrow">
+            <div class="book-list">
+                {{#each availableBooks}}
+                    <div class="book-item">
+                        <input type="checkbox" name="bookIds" value="{{this.id}}">
+                        <label>{{this.title}} by {{this.author}}</label>
+                        
+                    </div>
+                {{/each}}
+            </div>
+            <button type="submit" id="borrowBtn" disabled>Borrow Selected</button>
+        </form>
+    </div>
+    <div class="book-container right">
+        <h2>Your Borrowed Books</h2>
+        <h4>{{username}}</h4>
+        <form method="POST" action="/return">
+            {{#each borrowedBooks}}
+                <div class="book-item">
+                    <input type="checkbox" name="returnIds" value="{{this.id}}">
+                    <label>{{this.title}} by {{this.author}}</label>
+                </div>
+            {{/each}}
+            <button type="submit" id="returnBtn" disabled>Return Selected</button>
+        </form>
+    </div>
+</div>
+<script src="/home.js"></script>

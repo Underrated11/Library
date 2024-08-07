@@ -1,0 +1,271 @@
+/* General body and typography styles applicable to all pages */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling common to all pages */
+.header {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Styles for links and navigation common to all pages */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design adjustments applicable to all pages */
+@media (max-width: 768px) {
+    .header,
+    .container,
+    .container-signin,
+    .content,
+    .book-container,
+    .user-info {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Specific styles for the Landing Page */
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: auto; 
+    padding: 20px;
+}
+
+.signin-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.signin-link:hover {
+    background-color: #2980b9;
+}
+
+/* Sign-in Page Specific Styles */
+.container-signin {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.container-signin h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, input[type="text"], input[type="password"], input[type="email"], select, input[type="checkbox"], button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: #e74c3c;
+    margin: 15px 0;
+}
+
+/* Home Page Specific Styles */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    height: calc(100vh - 60px);
+}
+
+.book-container {
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.book-list {
+    overflow-y: scroll; /* Make the book list scrollable */
+    max-height: 70vh; /* Adjust max height to fit within the viewport */
+    margin-bottom: 20px;
+}
+
+h3 {  /* Styling for the book container header */
+    text-align: left;
+    margin-top: 0;
+    color: #333;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0; 
+    border-bottom: 1px solid #eee;
+}
+
+.book-item:last-child {
+    border-bottom: none;
+}
+
+.book-item label {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.book-item input[type="checkbox"] {
+    
+}
+
+.book-container button {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-container button:hover {
+    background-color: #45a049;
+}
+
+.user-info {
+    width: 30%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    top: 10px; 
+}
+
+.user-info h2 {
+    margin-top: 20px; 
+}
+
+.signout-link {
+    color: #fff;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.signout-link:hover {
+    background-color: #c0392b;
+}
+
+/* Styles specific to the register page */
+.register-body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.register-body .header {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.register-body .header h1 {
+    margin: 0;
+}
+
+.container-register {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.container-register h2 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container-register {
+        width: 80%;
+        right: 10%;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;  
+    background-image: url('/images/background.jpg'); 
+    background-size: cover;  
+    background-position: center;  
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

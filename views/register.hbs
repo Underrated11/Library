@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Library App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                document.getElementById('error-message').innerText = "Passwords do not match.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body class="register-body">
+    <div class="header">
+        <h1>Library App</h1>
+    </div>
+    <div class="container-register">
+        <h2>Register</h2>
+        {{#if error}}
+            <div class="error">{{error}}</div>
+        {{/if}}
+        <div id="error-message" class="error"></div>
+        <form action="/register" method="POST" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+     </class="register-link-container">
+            <p>You have an account? <a href="/signin" class="register-link">Sign-in</a></p>
+        </div>
+</body>
+</html>
